@@ -14,12 +14,12 @@ import com.tsystems.tu.negocio.objetos.AbstractVehiculo;
  *
  */
 @Default
-public class ColisionBOImpl implements ColisionBO {
+public class Colision2BOImpl implements ColisionBO {
 
 	/**
 	 * Constructor.
 	 */
-	public ColisionBOImpl() {
+	public Colision2BOImpl() {
 
 	}
 

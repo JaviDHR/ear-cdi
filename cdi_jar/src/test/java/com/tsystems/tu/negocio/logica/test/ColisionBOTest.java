@@ -5,6 +5,8 @@ import static org.junit.Assert.assertEquals;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.inject.Inject;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -22,6 +24,7 @@ import com.tsystems.tu.negocio.objetos.Motocicleta;
 public class ColisionBOTest {
 
 	// Objeto de negocio a testear.
+	@Inject
 	private ColisionBOImpl colisionBO;
 
 	private List<AbstractVehiculo> vehiculos;
@@ -45,7 +48,7 @@ public class ColisionBOTest {
 		// Crear la instancia del objeto de negocio.
 		// Probad: ¿Qué ocurre si lo intento inyectar con CDI?
 		// ¿Cuándo se ejecutan los tests?
-		this.colisionBO = new ColisionBOImpl();
+		//this.colisionBO = new ColisionBOImpl();
 	}
 
 	/**
