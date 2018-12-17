@@ -5,6 +5,7 @@ package com.tsystems.tu.negocio.objetos;
  * @author krequena
  *
  */
+
 public class Coche extends AbstractVehiculo {
 
 	// Constantes.

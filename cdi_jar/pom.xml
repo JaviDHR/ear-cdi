@@ -38,6 +38,9 @@
 		<version.cdi>2.0</version.cdi>
 		<version.log4j>2.11.1</version.log4j>
 		<version.commons.lang>3.0</version.commons.lang>
+		<version.hibernate>5.2.4.Final</version.hibernate>
+		<version.bean.validation>2.0.1.Final</version.bean.validation>
+		<version.h2>1.4.197</version.h2>
 
 		<!-- Test dependencies versions. -->
 		<version.junit>4.12</version.junit>
@@ -57,6 +60,27 @@
 	</properties>
 
 	<dependencies>
+		<!-- Hibernate -->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-entitymanager</artifactId>
+            <version>${version.hibernate}</version>
+        </dependency>
+
+		<!-- Bean Validation -->
+		<dependency>
+			<groupId>javax.validation</groupId>
+			<artifactId>validation-api</artifactId>
+			<version>${version.bean.validation}</version>
+		</dependency>
+
+		<!-- H2 -->
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<version>${version.h2}</version>
+			<scope>runtime</scope>
+		</dependency>
 		<!-- CDI -->
 		<dependency>
 			<groupId>javax.enterprise</groupId>
