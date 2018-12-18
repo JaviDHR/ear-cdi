@@ -1,6 +1,12 @@
 package com.tsystems.tu.negocio.logica;
 
 import java.util.List;
+
+import javax.ejb.Local;
+import javax.ejb.Stateful;
+import javax.ejb.Stateless;
+import javax.enterprise.inject.Default;
+
 import com.tsystems.tu.negocio.objetos.AbstractVehiculo;
 
 /**
@@ -9,6 +15,7 @@ import com.tsystems.tu.negocio.objetos.AbstractVehiculo;
  * @author krequena
  *
  */
+@Local
 public interface ColisionBO {
 
 	/**

@@ -34,11 +34,24 @@
 	</developers>
 
 	<dependencies>
+		<!-- EJB -->
+        <dependency>
+            <groupId>org.jboss.spec.javax.ejb</groupId>
+            <artifactId>jboss-ejb-api_3.2_spec</artifactId>
+            <version>1.0.1.Final</version>
+            <scope>provided</scope>            
+        </dependency>
+		<dependency>
+		    <groupId>org.jboss.resteasy</groupId>
+		    <artifactId>jaxrs-api</artifactId>
+		    <version>3.0.12.Final</version>
+		</dependency>
 		<!-- Dependencia del JAR de negocio. -->
 		<dependency>
 			<groupId>com.tsystems.tu.cdi</groupId>
 			<artifactId>cdi_jar</artifactId>
 			<version>${project.version}</version>
+			<type>ejb</type>
 		</dependency>
 
 		<!-- CDI -->

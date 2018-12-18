@@ -2,6 +2,7 @@ package com.tsystems.tu.dao;
 
 import java.util.List;
 
+import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.Persistence;
 
@@ -17,24 +18,25 @@ import com.tsystems.tu.exceptions.DaoException;
  * @author krequena
  *
  */
-public class TareaDao implements IDao<Tarea> {
+@Stateless
+public class UserDao implements IDao<Tarea> {
 	
 	private static final Logger LOG = LogManager.getLogger();
 
-	private static final String QUERY_OBTENER_TODOS = "SELECT t FROM Tarea t";
+	private static final String QUERY_OBTENER_TODOS = "SELECT t FROM User t";
 
 	EntityManager em = null;
 	
 	/**
 	 * Constructor del DAO.
 	 */
-	public TareaDao() {
+	public UserDao() {
 		this.em = Persistence.createEntityManagerFactory("dao").createEntityManager();
 	}
 
 	@Override
 	public Tarea obtenerPorId(long id) throws DaoException {
-		LOG.info("TareaDAO.obtenerPorId. Id: {}.", id);
+		LOG.info("UserDAO.obtenerPorId. Id: {}.", id);
 		try {
 			return em.find(Tarea.class, id);
 		} catch (Exception exception) {
@@ -45,7 +47,7 @@ public class TareaDao implements IDao<Tarea> {
 	@SuppressWarnings("unchecked")
 	@Override
 	public List<Tarea> obtenerTodos() throws DaoException {
-		LOG.info("TareaDAO.obtenerTodos.");
+		LOG.info("UserDAO.obtenerTodos.");
 		try {
 			return em.createQuery(QUERY_OBTENER_TODOS).getResultList();
 		} catch (Exception exception) {
@@ -55,7 +57,7 @@ public class TareaDao implements IDao<Tarea> {
 
 	@Override
 	public void insertar(Tarea instancia) throws DaoException {
-		LOG.info("TareaDAO.insertar. {}", instancia);
+		LOG.info("UserDAO.insertar. {}", instancia);
 		try {
 			em.persist(instancia);
 		} catch (Exception exception) {
@@ -65,7 +67,7 @@ public class TareaDao implements IDao<Tarea> {
 
 	@Override
 	public void modificar(Tarea instancia) throws DaoException {
-		LOG.info("TareaDAO.modificar. {}.", instancia);
+		LOG.info("UserDAO.modificar. {}.", instancia);
 		try {
 			em.merge(instancia);
 		} catch (Exception exception) {
@@ -75,7 +77,7 @@ public class TareaDao implements IDao<Tarea> {
 
 	@Override
 	public void eliminar(long id) throws DaoException {
-		LOG.info("TareaDAO.eliminar. Id: {}.", id);
+		LOG.info("UserDAO.eliminar. Id: {}.", id);
 		try {
 			Tarea instancia = this.obtenerPorId(id);
 			em.remove(instancia);

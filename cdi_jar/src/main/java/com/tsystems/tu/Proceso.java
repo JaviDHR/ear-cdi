@@ -18,7 +18,6 @@ import com.tsystems.tu.negocio.objetos.Motocicleta;
  * @author krequena
  *
  */
-
 public class Proceso {
 
 	// Objeto logger.

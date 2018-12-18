@@ -39,6 +39,7 @@
 			<groupId>com.tsystems.tu.cdi</groupId>
 			<artifactId>cdi_jar</artifactId>
 			<version>${project.version}</version>
+			<type>ejb</type>
 		</dependency>
 		<dependency>
 			<groupId>com.tsystems.tu.cdi</groupId>

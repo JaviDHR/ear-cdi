@@ -2,6 +2,7 @@ package com.tsystems.tu.negocio.logica;
 
 import java.util.List;
 
+import javax.ejb.Stateless;
 import javax.enterprise.inject.Alternative;
 import javax.enterprise.inject.Default;
 
@@ -13,7 +14,7 @@ import com.tsystems.tu.negocio.objetos.AbstractVehiculo;
  * @author krequena
  *
  */
-@Default
+@Stateless
 public class ColisionBOImpl implements ColisionBO {
 
 	/**

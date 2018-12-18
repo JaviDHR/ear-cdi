@@ -15,7 +15,8 @@
 	<description>Demo de uso de CDI.</description>
 	<url>https://github.com/t-university/cdi</url>
 	<artifactId>cdi_jar</artifactId>
-
+	<packaging>ejb</packaging>
+	
 	<licenses>
 		<license>
 			<name>MIT License</name>
@@ -60,6 +61,13 @@
 	</properties>
 
 	<dependencies>
+	 	<!-- EJB -->
+        <dependency>
+            <groupId>org.jboss.spec.javax.ejb</groupId>
+            <artifactId>jboss-ejb-api_3.2_spec</artifactId>
+            <version>1.0.1.Final</version>
+            <scope>provided</scope>            
+        </dependency>
 		<!-- Hibernate -->
         <dependency>
             <groupId>org.hibernate</groupId>
@@ -115,6 +123,13 @@
 
 	<build>
 		<plugins>
+			<plugin>
+                <artifactId>maven-ejb-plugin</artifactId>
+                <version>${version.ejb.plugin}</version>
+                <configuration>
+                    <ejbVersion>3.1</ejbVersion>
+                </configuration>
+            </plugin>
 			<!-- Maven Javadoc plugin -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>

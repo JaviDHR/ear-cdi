@@ -46,6 +46,7 @@
 		<version.servlet.api>1.0.0.Final</version.servlet.api>
 		<version.commons.lang>3.0</version.commons.lang>
 		<version.log4j>1.2.17</version.log4j>
+		<version.ejb.plugin>2.3</version.ejb.plugin>
 
 		<!-- Test dependencies versions. -->
 		<version.junit>4.12</version.junit>
